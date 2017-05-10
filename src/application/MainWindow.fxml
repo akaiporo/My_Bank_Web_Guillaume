@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <top>
+      <VBox prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button id="add_account" mnemonicParsing="false" onAction="#handleButtonAddAccount" prefHeight="25.0" prefWidth="85.0" text="Add Account" />
+                  <Button id="add_user" mnemonicParsing="false" onAction="#handleButtonDeconnexion" text="Deconnexion" />
+                  <!--  <Button id="add_user" mnemonicParsing="false" onAction="#handleNewLink" text="Lier un compte" /> -->
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+   	<StackPane fx:id="content" />
+   </center>
+</BorderPane>

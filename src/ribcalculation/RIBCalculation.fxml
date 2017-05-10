@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ribcalculation.RIBCalculationController">
+     <userData>
+        <fx:reference source="controller" />
+    </userData>
+    <properties>
+        <!-- store controller at key "controllerData" in properties map -->
+        <controllerData><fx:reference source="controller" /></controllerData> 
+    </properties>
+   <children>
+      <Label layoutX="192.0" layoutY="22.0" text="Relevé d'identité bancaire" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label id="titulaire" fx:id="titulaire" layoutX="22.0" layoutY="80.0" prefHeight="31.0" prefWidth="554.0" />
+      <Label layoutX="22.0" layoutY="59.0" text="Titulaire" />
+      <Label layoutX="22.0" layoutY="122.0" text="Domiciliation" />
+      <Label id="domiciliation" fx:id="domiciliation" layoutX="22.0" layoutY="147.0" prefHeight="31.0" prefWidth="554.0" />
+      <Label id="account_number" fx:id="account_number" layoutX="264.0" layoutY="218.0" prefHeight="31.0" prefWidth="216.0" />
+      <Label id="bank_code" fx:id="bank_code" layoutX="24.0" layoutY="218.0" prefHeight="31.0" prefWidth="101.0" />
+      <Label id="rib_key" fx:id="rib_key" layoutX="497.0" layoutY="218.0" prefHeight="31.0" prefWidth="78.0" />
+      <Label layoutX="29.0" layoutY="195.0" text="Code banque" />
+      <Label layoutX="152.0" layoutY="195.0" text="Code guichet" />
+      <Label layoutX="306.0" layoutY="195.0" text="Numero de compte" />
+      <Label layoutX="508.0" layoutY="195.0" text="Clé RIB" />
+      <Label id="counter_code" fx:id="counter_code" layoutX="148.0" layoutY="218.0" prefHeight="31.0" prefWidth="101.0" />
+      <Label layoutX="25.0" layoutY="264.0" text="IBAN" />
+      <Label id="iban" fx:id="iban" layoutX="25.0" layoutY="287.0" prefHeight="31.0" prefWidth="554.0" />
+      <Label layoutX="26.0" layoutY="327.0" text="BIC" />
+      <Label id="bic" fx:id="bic" layoutX="25.0" layoutY="349.0" prefHeight="31.0" prefWidth="554.0" />
+      <Button id="btn_print" fx:id="btn_print" layoutX="446.0" layoutY="355.0" mnemonicParsing="false"  text="Print" />
+      <Button id="btn_cancel" fx:id="btn_cancel" layoutX="511.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleButtonCancel" text="Cancel" />
+   </children>
+</AnchorPane>

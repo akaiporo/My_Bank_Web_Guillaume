@@ -1,0 +1,10 @@
+1. Si deux lignes ont les mêmes champs (mais qu'elles ne sont pas le même objet), l'event changed ne se trigger pas.
+	Raison : La surcharge du .equals dans la classe PeriodicTransaction. On avait habituellement besoin de comparer les champs un à un, et non pas l'objet. Sauf ici. Résoudre ce bug reviendrait à repenser les autres tests equals qui sont fait dans le code.
+
+2. Le graphique crée une "section" de la PieChart par ligne, quand bien même la même catégorie est présente plusieurs fois. Plusieurs tests ont été efectuées pour trier, mais avec comme résultat l'erreur "Children duplicate".
+	Raison : semble similaire à https://bugs.openjdk.java.net/browse/JDK-8124777
+
+3. Bien qu'un compte soit sélectionné d'office, il faut en sélectionner un autre, et revenir sur le précédent pour que son ID soit pris en compte. Si non, la liste est bien générée comme il faut (donc avec le bon id de compte, étrangement), mais lors d'ajout/suppression/édition, l'erreur suivant apparaît : 
+Le champ 'id_account' ne peut être vide (null).
+	Raison : inconnue. Sûrement un problème de copie entre les lignes (et non un problème dans le choix du compte lui-même).
+
